@@ -2,7 +2,8 @@ Pinteresting::Application.routes.draw do
   root "pages#home"
   get "about" => "pages#about" #creates about path
   get "signup" => "pages#signup" #creates signup path
-  # The priority is based upon order of creation: first created -> highest priority.
+  get "carouseltest" => "pages#carouseltest" #creates carouseltest path
+    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
