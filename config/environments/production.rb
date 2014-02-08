@@ -80,7 +80,7 @@ Pinteresting::Application.configure do
 
 #required for heroku#
 #note to set this to your actual host#
-config.action_mailer.default_url_options = { :host => 'http://gdm-bucketlist.herokuapp.com/' }
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
 
 end
