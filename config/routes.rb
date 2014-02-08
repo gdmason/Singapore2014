@@ -2,7 +2,6 @@ Pinteresting::Application.routes.draw do
   devise_for :users
   root "pages#home"
   get "about" => "pages#about" #creates about path
-  get "signup" => "pages#signup" #creates signup path
   get "carouseltest" => "pages#carouseltest" #creates carouseltest path
     # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -10,7 +9,7 @@ Pinteresting::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  # Example of regular route:
+  # Examp le of regular route:
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
