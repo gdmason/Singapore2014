@@ -15,24 +15,45 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <%= link_to root_path do %>
-          <span class="glyphicon glyphicon-home"></span>
+        <% if !user_signed_in? %>
+          <li>
+            <%= link_to new_user_session_path do %>
+            <span class="glyphicon glyphicon-user"></span> Log In
+            <% end %>
+          </li>
+          <li>
+            <%= link_to root_path do %>
+            <span class="glyphicon glyphicon-home"></span> Home
+            <% end %>
+          </li>
+          <li><%= link_to about_path do %>
+            <span class="glyphicon glyphicon-book"></span> About
           <% end %>
-        </li>
-        <li><%= link_to "About", about_path %></li>
-        <% if user_signed_in? %>
+          </li>
+
+        <% else %>
           <li>
             <%= link_to new_pin_path do %>
-              <span class="glyphicon glyphicon-plus"></span> New Pin
+            <span class="glyphicon glyphicon-plus"></span> New Pin
+           <% end %>
+          </li>
+          <li>
+            <%= link_to root_path do %>
+            <span class="glyphicon glyphicon-home"></span> Home
             <% end %>
           </li>
           <li><%= link_to edit_user_registration_path do %>
-                <span class="glyphicon glyphicon-user"></span>
-            <% end %>
+              <span class="glyphicon glyphicon-user"></span> Profile
+              <% end %>
           </li>
-          <li><%= link_to "Gallery", carouseltest_path %></li>
-          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to carouseltest_path do %>
+              <span class="glyphicon glyphicon-picture"></span> Gallery
+          <% end %>
+          </li>
+          <li><%= link_to destroy_user_session_path, method: :delete do %>
+            <span class="glyphicon glyphicon-road"></span> Logout
+          <% end %>
+          </li>
         <%end%> 
       </ul>
     </div><!-- /.navbar-collapse -->

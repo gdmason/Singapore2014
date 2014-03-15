@@ -1,12 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,500,600);
 
-$body-bg:  									#ecf0f1;
+$body-bg:  									darkgrey;
 $font-family-sans-serif: 'Ruda', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height: 							45px;
-$navbar-default-bg: 					white;
+$navbar-default-bg: 					black;
 $navbar-default-brand-color: 	#c0392b;
 $brand-primary: 							#c0392b;
-$jumbotron-bg:  							white;
+$jumbotron-bg:  							darkgrey;
 $jumbotron-padding: 					20px;
 $panel-default-heading-bg:		darkgrey;
 $panel-default-text:					black;
@@ -14,7 +14,7 @@ $panel-default-text:					black;
 
 @import 'bootstrap';
 
-body { padding-top: 60px; }
+body { padding-top: 45px; }
 
 .navbar-brand {font-weight: bold;}
 
